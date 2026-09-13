@@ -1,0 +1,106 @@
+name: Publish archive
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: publish-archive
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Rebuild and sign
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install archive tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends apt-utils dpkg-dev
+
+      # Reads public releases, so the repository token is enough: no cross-repo
+      # dispatch and no PAT. A tool that ships no .deb yet is not an error.
+      - name: Collect the newest package from each tool
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for repo in navikt/copilot navikt/cplt; do
+            gh release download --repo "$repo" --pattern '*.deb' --dir /tmp/debs --skip-existing \
+              || echo "no .deb in the latest $repo release yet"
+          done
+          ls -l /tmp/debs 2>/dev/null || echo "nothing downloaded"
+
+      - name: Add them to the pool
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for deb in /tmp/debs/*.deb; do
+            name=$(dpkg-deb --field "$deb" Package)
+            dir="pool/main/${name:0:1}/${name}"
+            mkdir -p "$dir"
+            cp -n "$deb" "$dir/"
+          done
+
+      - name: Rebuild the indices
+        run: |
+          set -euo pipefail
+          for arch in amd64 arm64; do
+            dir="dists/stable/main/binary-${arch}"
+            mkdir -p "$dir"
+            dpkg-scanpackages --arch "$arch" pool > "$dir/Packages"
+            gzip -9cn "$dir/Packages" > "$dir/Packages.gz"
+          done
+          apt-ftparchive \
+            -o APT::FTPArchive::Release::Origin=Nav \
+            -o APT::FTPArchive::Release::Label=Nav \
+            -o APT::FTPArchive::Release::Suite=stable \
+            -o APT::FTPArchive::Release::Codename=stable \
+            -o APT::FTPArchive::Release::Components=main \
+            -o APT::FTPArchive::Release::Architectures="amd64 arm64" \
+            release dists/stable > dists/stable/Release
+
+      # Without the key the archive is unsigned, and apt refuses an unsigned
+      # archive. The rest of the build still runs, so the pool and indices are
+      # correct the moment the key arrives.
+      - name: Sign it
+        env:
+          APT_SIGNING_KEY: ${{ secrets.APT_SIGNING_KEY }}
+          APT_SIGNING_KEY_ID: ${{ secrets.APT_SIGNING_KEY_ID }}
+        run: |
+          set -euo pipefail
+          if [ -z "${APT_SIGNING_KEY}" ]; then
+            echo "::warning::APT_SIGNING_KEY is not set, so this archive is unsigned and apt will refuse it"
+            rm -f dists/stable/InRelease dists/stable/Release.gpg
+            exit 0
+          fi
+          export GNUPGHOME=$(mktemp -d)
+          chmod 700 "$GNUPGHOME"
+          printf '%s' "${APT_SIGNING_KEY}" | gpg --batch --quiet --import
+          gpg --batch --yes --local-user "${APT_SIGNING_KEY_ID}" \
+            --clearsign -o dists/stable/InRelease dists/stable/Release
+          gpg --batch --yes --local-user "${APT_SIGNING_KEY_ID}" \
+            --detach-sign --armor -o dists/stable/Release.gpg dists/stable/Release
+          mkdir -p keyring
+          gpg --export "${APT_SIGNING_KEY_ID}" > keyring/navikt-archive-keyring.gpg
+          rm -rf "$GNUPGHOME"
+
+      - name: Commit what changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A pool dists keyring
+          if git diff --cached --quiet; then
+            echo "archive unchanged"
+            exit 0
+          fi
+          git commit -m "chore: rebuild archive"
+          git push
