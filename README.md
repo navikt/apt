@@ -39,6 +39,14 @@ to be dispatched from the tool repos.
 
 Old versions stay in the pool, so a pinned install keeps working.
 
+## Status
+
+The archive is not signed yet, so the install block above does not work. Two
+issues track what remains:
+
+- [#1](https://github.com/navikt/apt/issues/1) generate the signing key and add the secrets
+- [#2](https://github.com/navikt/apt/issues/2) verify the archive once the tools ship their first `.deb`
+
 ## Signing
 
 Two secrets:
