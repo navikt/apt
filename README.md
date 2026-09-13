@@ -18,9 +18,9 @@ sudo apt update
 sudo apt install nav-pilot cplt
 ```
 
-Until the archive is signed, the commands above fail: `apt` refuses an unsigned
-archive, and adding `[trusted=yes]` to work around that turns off verification
-entirely. Install from the release asset instead:
+Until the archive is signed, the commands above fail. `apt` refuses an unsigned
+archive, and `[trusted=yes]` turns off verification entirely. Install from the
+release asset instead:
 
 ```bash
 gh release download --repo navikt/copilot --pattern '*_amd64.deb'
@@ -34,15 +34,14 @@ sudo apt install ./nav-pilot_*_amd64.deb
 rebuilds the indices under `dists/stable/`, signs `InRelease` and `Release.gpg`,
 publishes the public key to `keyring/`, and commits if anything changed.
 
-Reading public releases needs no token beyond the workflow's own, so nothing has
-to be dispatched from the tool repos.
+Reading public releases needs no token beyond the workflow's own, so the tool
+repos dispatch nothing.
 
 Old versions stay in the pool, so a pinned install keeps working.
 
 ## Status
 
-The archive is not signed yet, so the install block above does not work. Two
-issues track what remains:
+The archive is not signed yet. Two issues track what remains:
 
 - [#1](https://github.com/navikt/apt/issues/1) generate the signing key and add the secrets
 - [#2](https://github.com/navikt/apt/issues/2) verify the archive once the tools ship their first `.deb`
@@ -56,8 +55,8 @@ Two secrets:
 | `APT_SIGNING_KEY` | ASCII-armoured private key for the archive |
 | `APT_SIGNING_KEY_ID` | that key's fingerprint |
 
-The key signs an archive, nothing else. Give it no other use, and rotate it by
-replacing both secrets and re-running the workflow: the next run republishes
+The key signs this archive and nothing else. To rotate it, replace both secrets
+and re-run the workflow. The next run republishes
 `keyring/navikt-archive-keyring.gpg`, and clients pick the new key up on their
 next `apt update`.
 
