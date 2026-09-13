@@ -52,10 +52,18 @@ jobs:
       - name: Rebuild the indices
         run: |
           set -euo pipefail
+          mkdir -p pool/main
+          have_debs=$(find pool -name '*.deb' -print -quit)
           for arch in amd64 arm64; do
             dir="dists/stable/main/binary-${arch}"
             mkdir -p "$dir"
-            dpkg-scanpackages --arch "$arch" pool > "$dir/Packages"
+            # An empty pool is a valid state before the first tool ships a .deb,
+            # but dpkg-scanpackages treats it as an error.
+            if [ -n "$have_debs" ]; then
+              dpkg-scanpackages --arch "$arch" pool > "$dir/Packages"
+            else
+              : > "$dir/Packages"
+            fi
             gzip -9cn "$dir/Packages" > "$dir/Packages.gz"
           done
           apt-ftparchive \
