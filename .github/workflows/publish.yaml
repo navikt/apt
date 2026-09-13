@@ -52,7 +52,7 @@ jobs:
       - name: Rebuild the indices
         run: |
           set -euo pipefail
-          mkdir -p pool/main
+          mkdir -p pool/main keyring
           have_debs=$(find pool -name '*.deb' -print -quit)
           for arch in amd64 arm64; do
             dir="dists/stable/main/binary-${arch}"
@@ -105,7 +105,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- pool dists keyring 2>/dev/null || git add -A -- pool dists
+          git add -A -- pool dists keyring
           if git diff --cached --quiet; then
             echo "archive unchanged"
             exit 0
