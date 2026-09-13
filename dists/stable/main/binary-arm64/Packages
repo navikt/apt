@@ -1,0 +1,16 @@
+Package: nav-pilot
+Version: 2026.09.13-130448-45e56c1
+Architecture: arm64
+Maintainer: Nav <navikt@nav.no>
+Filename: pool/main/n/nav-pilot/nav-pilot_2026.09.13-130448-45e56c1_arm64.deb
+Size: 5326746
+MD5sum: 3de41113223bfc6443167192ad34b8c1
+SHA1: 0a1dda000b593760eceaa93f2826a2388fee4c3a
+SHA256: 49e484ec0d4d93639178aac4f9bb77eec33bbdd489bf6129134829ae64382fa5
+Section: devel
+Priority: optional
+Homepage: https://github.com/navikt/copilot
+Description: Nav's institutional AI developer toolkit installer
+ nav-pilot installs Nav's agents, skills and instructions into a repo
+ or a user profile, and launches a coding agent against them.
+
