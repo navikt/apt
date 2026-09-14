@@ -18,9 +18,11 @@ sudo apt update
 sudo apt install nav-pilot cplt
 ```
 
-Until the archive is signed, the commands above fail. `apt` refuses an unsigned
-archive, and `[trusted=yes]` turns off verification entirely. Install from the
-release asset instead:
+The archive is signed, so `apt` verifies every package against the keyring you
+installed in the first command.
+
+To install without the archive, take the `.deb` straight off a release. It
+installs once and never updates itself:
 
 ```bash
 gh release download --repo navikt/copilot --pattern '*_amd64.deb'
@@ -38,13 +40,6 @@ Reading public releases needs no token beyond the workflow's own, so the tool
 repos dispatch nothing.
 
 Old versions stay in the pool, so a pinned install keeps working.
-
-## Status
-
-The archive is not signed yet. Two issues track what remains:
-
-- [#1](https://github.com/navikt/apt/issues/1) generate the signing key and add the secrets
-- [#2](https://github.com/navikt/apt/issues/2) verify the archive once the tools ship their first `.deb`
 
 ## Signing
 
