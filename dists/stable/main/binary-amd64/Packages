@@ -1,13 +1,13 @@
 Package: cplt
-Version: 2026.09.15-143904-77f4321
+Version: 2026.09.18-075439-d2cb6c9
 Architecture: amd64
 Maintainer: Nav <navikt@nav.no>
 Recommends: bubblewrap
-Filename: pool/main/c/cplt/cplt_2026.09.15-143904-77f4321_amd64.deb
-Size: 1665268
-MD5sum: 1584f31f282958d0bce55586c5765f39
-SHA1: b586efd1fa632d140be475d558cafe8d22c13307
-SHA256: fa179b2e6d4b7312c89dd8297263947c63959d5cd76ca7c45844b36f600cb485
+Filename: pool/main/c/cplt/cplt_2026.09.18-075439-d2cb6c9_amd64.deb
+Size: 1694062
+MD5sum: 80db8b598f23ec3a377ea0c01d8189ea
+SHA1: e19f49f5b89f64394d105affcf56cbea712ccf1c
+SHA256: f42d31dac46b4854c6c347ad33524b3d9c8b0f16723719fc18756a56a9b8f0e6
 Section: devel
 Priority: optional
 Homepage: https://github.com/navikt/cplt
@@ -16,14 +16,14 @@ Description: Sandbox wrapper for GitHub Copilot CLI
  Linux, so an agent only reaches the files and hosts you allow.
 
 Package: nav-pilot
-Version: 2026.09.17-101405-3e2b4b6
+Version: 2026.09.18-082649-48dc24a
 Architecture: amd64
 Maintainer: Nav <navikt@nav.no>
-Filename: pool/main/n/nav-pilot/nav-pilot_2026.09.17-101405-3e2b4b6_amd64.deb
-Size: 6058658
-MD5sum: b91e8f55269082442ee841be2483e70f
-SHA1: 62bbdfaa72b0d19278ca9bd9b12d5433782c7cfd
-SHA256: c5bd5829e9ee4658b0f60e5465860bd66beb78924ce3cd352b39015d532a9f22
+Filename: pool/main/n/nav-pilot/nav-pilot_2026.09.18-082649-48dc24a_amd64.deb
+Size: 6059738
+MD5sum: ce5eac906a4dfdc00a73c77faa5e509c
+SHA1: 0dab7081cca72eb14b7520d8e65029d44c0eeace
+SHA256: be47d61a98702ec763a48dd900bd1491a40583fc433190a4a8150f98f76f9e99
 Section: devel
 Priority: optional
 Homepage: https://github.com/navikt/copilot
