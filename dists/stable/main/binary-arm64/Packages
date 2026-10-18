@@ -16,14 +16,14 @@ Description: Sandbox wrapper for GitHub Copilot CLI
  Linux, so an agent only reaches the files and hosts you allow.
 
 Package: nav-pilot
-Version: 2026.10.15-160300-d35826b
+Version: 2026.10.18-064656-1bf3fb4
 Architecture: arm64
 Maintainer: Nav <navikt@nav.no>
-Filename: pool/main/n/nav-pilot/nav-pilot_2026.10.15-160300-d35826b_arm64.deb
-Size: 6239628
-MD5sum: cf3347f2c5e6ba87b106a52e8044cce8
-SHA1: a723416da037ccb745e822401f5dec261b72f917
-SHA256: e4db930821df0a1f6f4cec6fa91fb635b2f57bfc2b08ea99ebf55a3c45e7d041
+Filename: pool/main/n/nav-pilot/nav-pilot_2026.10.18-064656-1bf3fb4_arm64.deb
+Size: 6239604
+MD5sum: f5363699f4dd387d1ae6b6bd11e0b2fa
+SHA1: 02524433d6090aaff8e10dc0019ac3624f270313
+SHA256: 1b6821955e873ee5a7599d47a7814dae768d51bd58f65dee228879a78538413d
 Section: devel
 Priority: optional
 Homepage: https://github.com/navikt/copilot
