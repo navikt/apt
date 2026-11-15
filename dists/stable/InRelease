@@ -4,47 +4,47 @@ Hash: SHA512
 Architectures: amd64 arm64
 Codename: stable
 Components: main
-Date: Sun, 15 Nov 2026 22:22:21 +0000
+Date: Sun, 15 Nov 2026 23:24:19 +0000
 Label: Nav
 Origin: Nav
 Suite: stable
 MD5Sum:
- 915382ee54a9e6de2dc14703f46e3725              136 Release
+ 16881cd8b162dc122b888dddd864f18e              136 Release
  4a37aeada5d2959da898e569ec047bea             1278 main/binary-amd64/Packages
  1b9f33ca5f815a9b9341e2acc2d94afe              715 main/binary-amd64/Packages.gz
  83761f00dadbaf40c401d008192b7c9c             1278 main/binary-arm64/Packages
  b57de5ee3348189d7dd37db606d87899              712 main/binary-arm64/Packages.gz
 SHA1:
- 4389630e9775361def0bf343f1ae8771bd61d046              136 Release
+ ef05344282f6bfaae825d7f3d3c06f3ac12185ce              136 Release
  60d12542d7d5d4cb78bfc342685e05bdabe1b69c             1278 main/binary-amd64/Packages
  488dd218354f00dc74fdf6794b75de6cbdc60f9f              715 main/binary-amd64/Packages.gz
  562ef10cc86e8f22a1c55134290d816dfe03c3a1             1278 main/binary-arm64/Packages
  50de12b146ca633d46debc28a7da415d53a3c542              712 main/binary-arm64/Packages.gz
 SHA256:
- 93322b406c319f375def643290360dafafde71f267e54fc489296a8b6d69cffa              136 Release
+ 6adb21af04bc1429629219782d002b21263bd30a7ac76edbd969e7405b6dd496              136 Release
  13b62ce90e3a8952ebe63e57228d73e4d1ac84d90b5d9ac2b993bd0d72c02f45             1278 main/binary-amd64/Packages
  fb8d8799070d22be1f590d0b33202e7483874aee0c0097adabe137b9da2c3d5c              715 main/binary-amd64/Packages.gz
  c999ba6ca27005c9c5c49d72e77f7ec52866d97aee7b24cf0468c1640e7425da             1278 main/binary-arm64/Packages
  36d43a81989b546ddc75b74e1dc72344860b77f5a9e5c60d429dd9b3d4f1192a              712 main/binary-arm64/Packages.gz
 SHA512:
- a258a9f9feeaa5846a19c1e09e99f5b59475cea9b7c0d53a970879537578b42b02fd77f72b7ea1496a8be25a9299d3073e657ed83c168acf6bf8b9592921d504              136 Release
+ 84e4b8918ef65f5337aa637b8f37dfd71a54e9e6d7ef7e2657a0f2059713b135ce5e634937b86874b682505e05c207297268bcd935e3795fec9f4e8991ea9366              136 Release
  f384da11ba1c9d495a2e36ec4fe2c601c937ff137522eb5e2df8705acd09b72f6dad10f0ac6e55aa9df40845c93dbd26d586d8988120540d7c70ff9c4815f67e             1278 main/binary-amd64/Packages
  7c8091d00d81516c1bbb2023bb086658fccc31a5b20cf47832cea6fd738f94902bd47ed2584dafa70926005c3373b64650d7c4f3eb75faf856c4aaabad99f961              715 main/binary-amd64/Packages.gz
  408f3f23cd74db1f47bdf230bc321282824c68a3de93ea9bce8581b1fd499cf10d5d6b6b96f89cb0546870314fbae13c7dc1ec4b1488c0a39733c363dc50343f             1278 main/binary-arm64/Packages
  a35e29fbb512b4a97ee190c19e983fad81089a4c8dae28c96d190b3694ed5490cddc26a039733053da9626868a51ad95a84fc79f74480283adae9ff90c6db7b3              712 main/binary-arm64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEuS6cftvwvXLwJrGJ/7JyS/ShLSgFAmr6MJ0ACgkQ/7JyS/Sh
-LSi9OA/+MVO/ZgxawiXKYUVV1KSlCTlIA4fkxUTezKV2yqZNH6zpjCXYNuMtK2KR
-BsExA9vME8zSpGbg2l9r1ZHnwU5PF+hkvQLLcvSI1N172k8KO5z+S+8OfXp4HrGD
-LJPZ10xnXBFDie9Ey1I4xxKj7rEsJt506ku1EFj39U6g3f/FA8AGL8FObqWPAsM7
-lf/zTDIjjfBQ7rmPattKZi3htRZ5hGjjoxCmNWRa/4m+fwJd5JLRJhTwePFBVKXX
-XPhD4aRCg3pJ+tnneRcU2wTfZ/3Rudo+HiXkW0jyh4LST+bF/UmWgpdw9DqDEfPT
-QpVXpWudA4FCu6t2psbZmuAequyjlnT1qh6bVFJu8FebGBzIFyqT/ANw3Qiyt9bO
-8igqZPvidIEnMxhYekZ2SqTfkY+isCKaHtd6l55GfEBRVjRWtqV+c00CfD9Us/kY
-2A9ST/nnMyjP/VEU6eTAPiER/GTNnoCjCLEynaBMaLS5oxWG567CFA/0W7GsXFTI
-kYBxNLlg0U39vJcVv8WJAJ0+tHwW7G6+4uLy1WUjZVCmmCww4Vl/7dKEmNVYIFml
-nRxGsNFI6pjKmFGI05CYMi7hF+R4bHmfQCvDn287UZ4bOI8WaG7aw+KefvJaE8u8
-OJ9aRr6R2lWWwxntsYfeo6Qkm/ZgNScjvxiwLsMTBOHNIXP0KDs=
-=um8Q
+iQIzBAEBCgAdFiEEuS6cftvwvXLwJrGJ/7JyS/ShLSgFAmr6PyMACgkQ/7JyS/Sh
+LSjfjxAAmZ7HFGeSE5DEB2hTyENyg6AfEAee+jLx9Vm2GpDb7xeto2W/t0DEvNzv
+0LN7ghZl/aX+nHBMNDxG37aUsgmRK/DAvHy6Cht2MdIOh1kLPWrzVDIEXeFAkZW0
+fUNj6pLsfFiIzY267uxfVxC5/eQ7NqMaPdsesO/ajlQcvghX9rpRh0KX+14KmsSb
+Xt0vh+bguuDpsexDVO4rNWDP/fj8aVYfOsYdFoyPxkViRYp6kqg3G67VXs6u0wwh
+JyqXjfTfqsquV/hGZP93+MFUWBc5Vqs147KoM4NI3OkJ2UTrhP4hOZIrIe3sNftB
+HZlkZUzXspcr6D5kP3RdqmzLkIab6wZ3t7s5+fapbUrkewg2EJdUk5kAhtHUh7Jl
+DuIw3TX5053CdOA6/I722c1wRqm+FmDZXaW0AxPvy688Q9sp32KC1E7gN4RQHppa
+rZ3TzQ+u5xiYLeLvBsXOqcNBotHJpJgMmEbLU3gWSqEwYMcGQ1Qb3D4cKTKb0vr+
+48dUJOjL16xbVIVNzj8wd9GQ/ET90115rb2V97TtEOh1Hf/ZJGScQ3ad4w9EmweF
+gdvXfNn5ZMSiESmlpZOEU2GGGn9BoE/tMAtmb/z+q/CPYdp/3LqCOSqRqG3KDxHt
+PeVQJlYPy6FhMpFJbKAUuiBJXvrdHoYSvdShd7wszvSXkru6zyw=
+=NPXc
 -----END PGP SIGNATURE-----
