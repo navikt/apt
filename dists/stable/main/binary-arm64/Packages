@@ -1,13 +1,13 @@
 Package: cplt
-Version: 2026.11.24-112325-0b16284
+Version: 2026.11.24-141729-cf69b2c
 Architecture: arm64
 Maintainer: Nav <navikt@nav.no>
 Recommends: bubblewrap, libsecret-tools
-Filename: pool/main/c/cplt/cplt_2026.11.24-112325-0b16284_arm64.deb
-Size: 3198514
-MD5sum: 24560c48b3131d50aa6e2ccda0c91306
-SHA1: b7bad7aba33398e8b3a6b056ba88dbb46e8220a6
-SHA256: 9c763cc0944b2d6933a2f8fd8bd888c7fe3826b958aa0131f15e4422f2de310c
+Filename: pool/main/c/cplt/cplt_2026.11.24-141729-cf69b2c_arm64.deb
+Size: 3205142
+MD5sum: 4274f7efcfeaff6c88716c25545b3162
+SHA1: 8762ebb627c75ec081dd8021c9079a2337dd28ff
+SHA256: 7eb55761f739f4f5dba3fc7c0ce3ca0b53522e1ad55bcaf89656657414e7f984
 Section: devel
 Priority: optional
 Homepage: https://github.com/navikt/cplt
