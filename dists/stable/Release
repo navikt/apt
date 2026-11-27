@@ -1,30 +1,30 @@
 Architectures: amd64 arm64
 Codename: stable
 Components: main
-Date: Fri, 27 Nov 2026 07:23:43 +0000
+Date: Fri, 27 Nov 2026 08:25:59 +0000
 Label: Nav
 Origin: Nav
 Suite: stable
 MD5Sum:
- aaa85d3689032c3e69fc5408370e8174              136 Release
+ 41985a77e088fa421cb0410fb207136e              136 Release
  357f57ef9aa908c3abd196a2dcbc4f7f             1278 main/binary-amd64/Packages
  5426ac6d265c117f22a626d6588045b3              708 main/binary-amd64/Packages.gz
  f5f92a3303bc3811f35778ae6f152fef             1278 main/binary-arm64/Packages
  69fe9a2587c98bf1e44d0c7a59cdefee              709 main/binary-arm64/Packages.gz
 SHA1:
- 55b24feca319da311798b653689029b2f340a394              136 Release
+ 91a7bb13d53d9770ab19aad98297c751e2c29bfa              136 Release
  39064ecca0d6676d7fa6d02907d81a092bb5c680             1278 main/binary-amd64/Packages
  2ba1ece6780f301290ff9f51720010e6ce63deea              708 main/binary-amd64/Packages.gz
  5d67ca8c1a8ecd8ec5937a77105df8b41f021199             1278 main/binary-arm64/Packages
  1472116c4a43b99c4515b55b5f35666a8e6220ec              709 main/binary-arm64/Packages.gz
 SHA256:
- 0b07acc764d261194ac65fbc880322651d085022404d88e92db47d8971407e37              136 Release
+ 8994a58e1497aa645620d7f95bd4f174d47e94731e5066de8f0e83f5435a30ab              136 Release
  95f22d342156a56d267c3ecada45da4125af0de05fc82324c76e8e420e3bb22b             1278 main/binary-amd64/Packages
  66b49f18244dda489898088b3c62fe8af1aea942103fff50ca121c0a2a02fba4              708 main/binary-amd64/Packages.gz
  36e70cdf6cbd0c3d3dfd8167576f07b61301cceb26928e8349a308502d5914f4             1278 main/binary-arm64/Packages
  c722ed664d1ee315473bb7382a74a5bbebdfaa6a8deb67e998b17af756bf54b3              709 main/binary-arm64/Packages.gz
 SHA512:
- f694e254449efba6e9e60b778c68ff28a7a159155edf3471723872271e98bac071511ce0c9a21f8dfce5c563b6ee24b0e66f1ad7a5887b1d80cd4a7f9943dbc5              136 Release
+ b1182310036901813c4b3a98d222203d014c749aab41e37e843e6297d8d73e9fb0d701ad3715a2f60f6bd642efa99c286452ff2f9009d8d9e2407ff307d573d8              136 Release
  6a9bcf7bcfd5c512e062e8625038b092c63c33c9efeb22f94b885bef42f2ad2d8f2119395ff7f14d44daff4a7a66407603621408046c447591ffa1c824da1112             1278 main/binary-amd64/Packages
  61fbbc20610c634b39fbfa6969e91bb37a974971dae2d6a390e582c7d484494cebebddb5b1ab16482035a0d12e204820cedeb2e60dda24da3a93cddcf8849b85              708 main/binary-amd64/Packages.gz
  849e84c876e3cee8a792a17303747ae37053a028fd9a73c37ff575ead8365b1a0e37c73d2aa8418067934fe0ac8dd6c0a902e94afe36fb8085c3340ab68ecedf             1278 main/binary-arm64/Packages
